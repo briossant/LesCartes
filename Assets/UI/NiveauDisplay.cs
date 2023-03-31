@@ -8,20 +8,27 @@ using UnityEngine.UI;
 public class NiveauDisplay : MonoBehaviour
 {
     private int _niv;
+    private int _hs;
     public TextMeshProUGUI nivTxt;
-
+    
     private void Start()
     {
         Resetcount();
+        _hs = -1;
     }
 
+    
     private void Update()
     {
-        nivTxt.text = $"Niveau : {_niv}";
+        nivTxt.text = $"Niveau : {_niv}\nHigh Score : {_hs}";
     }
 
     public void Resetcount()
     {
+        if (_niv > _hs)
+        {
+            _hs = _niv;
+        }
         _niv = 1;
     }
 

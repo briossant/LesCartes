@@ -107,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831874076654683049}
   - component: {fileID: 1795321502788272195}
+  - component: {fileID: 8176996872853366821}
   m_Layer: 0
   m_Name: GameCard2 1
   m_TagString: Enemy
@@ -151,6 +152,19 @@ MonoBehaviour:
   rotationSpeedV: 0.23
   angleH: 10.3
   angleV: 0
+--- !u!65 &8176996872853366821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835737788717931637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0023593, y: 1.3582491, z: 0.10597577}
+  m_Center: {x: -0.0011796355, y: 0.004395783, z: 0.013914295}
 --- !u!1 &1835843031271627117
 GameObject:
   m_ObjectHideFlags: 0

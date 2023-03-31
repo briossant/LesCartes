@@ -181,7 +181,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527793211
 GameObject:
@@ -212,7 +212,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -353,7 +353,7 @@ Transform:
   m_Children:
   - {fileID: 1473161917}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &878366888
 MonoBehaviour:
@@ -371,8 +371,76 @@ MonoBehaviour:
   cam: {fileID: 1473161917}
   parentOfCards: {fileID: 527793211}
   rotationSpeed: 10
-  cardNbr: 1
+  cardNbr: 10
   spawnDistance: 3
+--- !u!1001 &1081048236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6326800921525973061, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1092.8433
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 320.64996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844642175722329868, guid: 36a194a406d15c3419833158dd618377, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36a194a406d15c3419833158dd618377, type: 3}
+--- !u!114 &1081048237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4738806488584726847, guid: 36a194a406d15c3419833158dd618377, type: 3}
+  m_PrefabInstance: {fileID: 1081048236}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f3c9b5e91f85049bff2ad7f58e3f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473161911
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,3 +587,4 @@ MonoBehaviour:
   victoryEff: {fileID: 100006, guid: d7706cfdb18270946b264f7e7a0fb4c6, type: 3}
   lostEff: {fileID: 120972, guid: 866a4ac022f2a8e46b9f482d65401a64, type: 3}
   tuto: {fileID: 878366888}
+  tout: {fileID: 1081048237}

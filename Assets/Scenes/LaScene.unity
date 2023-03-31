@@ -336,10 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fab707daee084549be3cbd225c2f1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2656171014142846852, guid: 341ee3385d865b94b8aece13ad3e58fd, type: 3}
+  cardPrefab: {fileID: 0}
   cam: {fileID: 1473161917}
-  enemyNbr: 1
-  spawnRange: 3
+  cardNbr: 1
+  spawnDistance: 3
 --- !u!1 &1473161911
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,4 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a5ece697cda3240a5f317b073ced8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesEff: {fileID: 643868766731017297, guid: 3ec9113563223e940aead2cfcc3ab571, type: 3}
+  victoryEff: {fileID: 100006, guid: d7706cfdb18270946b264f7e7a0fb4c6, type: 3}
+  lostEff: {fileID: 120972, guid: 866a4ac022f2a8e46b9f482d65401a64, type: 3}
+  tuto: {fileID: 878366888}

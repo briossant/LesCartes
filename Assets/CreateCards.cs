@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CreateCards : MonoBehaviour
 {
     public GameObject cardPrefab;
     public Transform cam;
 
+    public GameObject parentOfCards;
+    public float rotationSpeed = 10f;
+    
     public int cardNbr = 1;
     public float spawnDistance = 3f;
 
@@ -32,6 +37,8 @@ public class CreateCards : MonoBehaviour
             {
                 obg.name = "LaBonne";
             }
+            obg.transform.Rotate(0, 360/cardNbr * i, 0);
+            obg.transform.parent = parentOfCards.transform;
             objs.Add(obg);
         }
     }
@@ -40,5 +47,10 @@ public class CreateCards : MonoBehaviour
     void Start()
     {
         SpawnCards();
+    }
+
+    private void Update()
+    {
+        //parentOfCards.transform.Rotate(0,rotationSpeed * Time.deltaTime,0);
     }
 }

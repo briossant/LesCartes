@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class NiveauDisplay : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class NiveauDisplay : MonoBehaviour
         _hs = -1;
     }
 
+    
     
     private void Update()
     {

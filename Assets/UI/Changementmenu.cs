@@ -7,7 +7,6 @@ public class Changementmenu : MonoBehaviour
 {
     public void Onclick()
     {
-        Debug.Log("click");
-        SceneManager.LoadScene("Menu en jeu");
+        SceneManager.LoadScene("LaScene");
     }
 }

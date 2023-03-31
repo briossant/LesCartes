@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LaScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/Scene2.unity
-    guid: f791e902f9d06a145991be9f07e9244e
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/UI/Menu en jeu.unity
     guid: 7569c3599e8c27046b91127e0c3126ee
   m_configObjects:

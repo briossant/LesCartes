@@ -17,13 +17,17 @@ public class CreateCards : MonoBehaviour
 
     private List<GameObject> objs = new List<GameObject>();
 
+    private int rotDir = 1;
+
     public void SpawnCards()
     {
         foreach (var g in objs)
         {
             Destroy(g);
         }
+
         objs = new List<GameObject>();
+        rotDir *= -1;
 
         float trigo = 2 * Mathf.PI / cardNbr;
         int selectedToBeLaBonne = Random.Range(0, cardNbr);
@@ -37,7 +41,7 @@ public class CreateCards : MonoBehaviour
             {
                 obg.name = "LaBonne";
             }
-            obg.transform.Rotate(0, -360/cardNbr * i, 0);
+            obg.transform.LookAt(cam.transform);
             obg.transform.parent = parentOfCards.transform;
             objs.Add(obg);
         }
@@ -51,6 +55,11 @@ public class CreateCards : MonoBehaviour
 
     private void Update()
     {
-        //parentOfCards.transform.Rotate(0,rotationSpeed * Time.deltaTime,0);
+        parentOfCards.transform.position = cam.transform.position;
+        parentOfCards.transform.Rotate(0,  rotationSpeed * Time.deltaTime * rotDir, 0);
+        foreach (var g in objs)
+        {
+            g.transform.LookAt(cam.transform);
+        }
     }
 }

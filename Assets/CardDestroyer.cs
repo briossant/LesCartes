@@ -56,18 +56,23 @@ public class CardDestroyer : MonoBehaviour
         
     }
 
+    void Respawn()
+    {
+        tuto.SpawnCards();
+    }
+
     void Victory()
     {
         Debug.Log("Victory");
         tout.Addone();
         tuto.cardNbr += 1;
-        tuto.SpawnCards();
+        Invoke(nameof(Respawn), 1);
     }
     void Die()
     {
         Debug.Log("Death");
         tout.Resetcount();
         tuto.cardNbr = 1;
-        tuto.SpawnCards();
+        Invoke(nameof(Respawn), 1);
     }
 }

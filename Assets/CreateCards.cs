@@ -37,7 +37,7 @@ public class CreateCards : MonoBehaviour
             {
                 obg.name = "LaBonne";
             }
-            obg.transform.Rotate(0, 360/cardNbr * i, 0);
+            obg.transform.Rotate(0, -360/cardNbr * i, 0);
             obg.transform.parent = parentOfCards.transform;
             objs.Add(obg);
         }

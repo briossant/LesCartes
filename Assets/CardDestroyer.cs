@@ -8,8 +8,9 @@ public class CardDestroyer : MonoBehaviour
     public GameObject victoryEff;
     public GameObject lostEff;
 
-    private Vector2 touchpos;
+    private Vector2 touch;
     [SerializeField] private CreateCards tuto;
+    [SerializeField] private NiveauDisplay tout;
     private RaycastHit hit;
     private Camera cam;
     
@@ -22,49 +23,50 @@ public class CardDestroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool victory = false;
         if (Input.touchCount <= 0)
         {
             return;
         }
 
-        touchpos = Input.GetTouch(0).position;
-        Ray ray = cam.ScreenPointToRay(touchpos);
+        touch = Input.GetTouch(0).position;
+        Ray ray = cam.ScreenPointToRay(touch);
 
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitobj = hit.collider.gameObject;
             if (hitobj.tag == "Enemy")
             {
-                if (hitobj.name == "LaBonne")
-                {
-                    victory = true;
-                }
+                bool victory = hitobj.name == "LaBonne";
+
                 var clone = Instantiate(victory ? victoryEff : lostEff, hitobj.transform.position, Quaternion.identity);
                 clone.transform.localScale = hitobj.transform.localScale;
                 Destroy(hitobj);
+                
+                if (victory)
+                {
+                    Victory();
+                }
+                else
+                {
+                    Die();
+                }
             }
         }
 
-        if (victory)
-        {
-            Victory();
-        }
-        else
-        {
-            Die();
-        }
+        
     }
 
     void Victory()
     {
         Debug.Log("Victory");
+        tout.Addone();
         tuto.cardNbr += 1;
         tuto.SpawnCards();
     }
     void Die()
     {
         Debug.Log("Death");
+        tout.Resetcount();
         tuto.cardNbr = 1;
         tuto.SpawnCards();
     }

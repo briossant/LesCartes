@@ -155,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.TP2
+    Android: com.CartosCEO.LosCartos
     Standalone: com.DefaultCompany.TP2
   buildNumber:
     Standalone: 0
